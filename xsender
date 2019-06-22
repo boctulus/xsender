@@ -38,18 +38,20 @@ wm=$(wmctrl -l | grep ' WhatsApp')
 # Si falla .... chau
 [[ $? -ne 0 ]] && exit 1
 
+echo "Enviando WhastaApp a $1 ..."
+
 # Obtengo el id de la window
 wm_id=`echo $wm | awk '{print $1};'` && \
 
 # Me posiciono sobre la caja de búsqueda y le doy foco haciendo click
 xdotool windowactivate "$wm_id" && \
-xdotool mousemove $x $y click 1 && \
+xdotool mousemove $x $y sleep 0.1 click 1 && \
 
 # Typeo tel
 xdotool type "$tel"
 
 # Me posiciono sobre el contacto seleccionado
-xdotool mousemove $x2 $y2 click 1 && \
+xdotool mousemove $x2 $y2 sleep 0.1 click 1 && \
 
 # Typeo mensaje
 xdotool type "$msg"
