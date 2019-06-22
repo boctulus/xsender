@@ -43,16 +43,16 @@ wm_id=`echo $wm | awk '{print $1};'` && \
 
 # Me posiciono sobre la caja de búsqueda y le doy foco haciendo click
 xdotool windowactivate "$wm_id" && \
-xdotool mousemove $x $y sleep 1 click 1 && \
+xdotool mousemove $x $y click 1 && \
 
 # Typeo tel
 xdotool type "$tel"
 
 # Me posiciono sobre el contacto seleccionado
-xdotool mousemove $x2 $y2 sleep 1 click 1 && \
+xdotool mousemove $x2 $y2 click 1 && \
 
 # Typeo mensaje
 xdotool type "$msg"
 
 # Envio el mensaje 
-xdotool keydown KP_Enter keyup KP_Enter keydown Escape keydown Escape
+xdotool keydown KP_Enter keyup KP_Enter keydown Escape keyup Escape
