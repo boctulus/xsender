@@ -32,7 +32,7 @@ wm=$(wmctrl -l | grep ' WhatsApp')
 [[ $? -ne 0 ]] && exit 1
 
 # Obtengo el id de la window
-wm_id=`$wm | awk '{print $1};'` && \
+wm_id=`echo $wm | awk '{print $1};'` && \
 
 # Me posiciono sobre la caja de búsqueda y le doy foco haciendo click
 xdotool windowactivate "$wm_id" && \
