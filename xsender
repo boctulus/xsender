@@ -10,19 +10,25 @@
 #   
 # - Intentar calcular las coordenadas en función del tamaño de la window 
 #
+#
+# Ej de uso:
+#
+# xsender +5491114441088 'Estimado xxx: muchas gracias por usar nuestro xsender :)'
+#
 
 # Datos
 
+[[ $# -lt 2 ]] && { echo 'Uso: xsender telefono mensaje'; exit 1; }
+tel="$1"; msg="$2"
 
+# Coordenadas a ser determinadas 
+# (artesanalmente por ahora)
 
-tel='+5492215431011'
-msg='Hola papá, qué más? :) este es un mensaje automatizado :P'
-
-
-# Coordenadas a ser determinadas
+# Coordenadas dentro del cuadro de búsqueda de contactos
 x='682'
 y='349'
 
+# Coordenadas dentro de la caja de texto donde se escriben los mensajes
 x2='712'
 y2='610'
 
@@ -50,4 +56,3 @@ xdotool type "$msg"
 
 # Envio el mensaje 
 xdotool keydown KP_Enter keyup KP_Enter keydown Escape keydown Escape
-
