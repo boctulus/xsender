@@ -1,4 +1,4 @@
-[ X Sender ] enviando mensajes de texto a WhatsApp desde la terminal 
+# [ X Sender ] enviando mensajes de texto a WhatsApp desde la terminal 
 
 He escrito un mini-script apoyándome principalmente en "xdotool" para demostrar su uso y porque un amigo me preguntó si sabía como resolver este requerimiento.
 
@@ -9,7 +9,7 @@ Ej de uso:
 xsender '+5491114441088' 'Estimado xxx: muchas gracias por usar nuestro xsender :)'
 
 
-Importante:
+### Importante:
 
 El contacto tiene que estar en la agenda de tu teléfono.
 Si apagas tu teléfono la sesión se te puede cerrar.

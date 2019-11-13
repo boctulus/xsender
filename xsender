@@ -36,7 +36,7 @@ y2='610'
 wm=$(wmctrl -l | grep ' WhatsApp')
 
 # Si falla .... chau
-[[ $? -ne 0 ]] && exit 1
+[[ $? -ne 0 ]] && { echo "No se pudo localizar una ventana con WhatsApp";exit 1; }
 
 echo "Enviando WhastaApp a $1 ..."
 
